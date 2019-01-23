@@ -1,14 +1,16 @@
 # you-should-know-cheatsheet
 A cheatsheet of things you should know as a JS developer
 
+(examples in TS for type clarity)
+
 ## Simple Maths
 
 ### Filter odd numbers in array
 
 Getting the odd numbers of an array is easy.
 
-```js
-const odds = arr =>
+```ts
+const odds = (arr: number[]) =>
   arr.filter(v => v & 1);
 ```
 
@@ -16,8 +18,8 @@ const odds = arr =>
 
 Getting evens is also easy!
 
-```js
-const evens = arr =>
+```ts
+const evens = (arr: number[]) =>
   arr.filter(v => !(v & 1));
 ```
 
@@ -29,6 +31,6 @@ it to read `$3.10`?
 Note: JavaScript rounds to the nearest integer, leaving off
 trailing zeros.
 
-```js
-const format = f64 => `$${f64.toFixed(2)}`;
+```ts
+const format = (f64: number): string => `$${f64.toFixed(2)}`;
 ```
