@@ -3,7 +3,7 @@ A cheatsheet of things you should know as a JS developer
 
 (examples in TS for type clarity)
 
-## Simple Maths
+## Arrays
 
 ### Filter odd numbers in array
 
@@ -22,20 +22,6 @@ Getting evens is also easy!
 const evens = (arr: number[]) =>
   arr.filter(v => !(v & 1));
 ```
-
-### Formatting money
-
-Let's suppose I passed you the number `3.1`. How would I get
-it to read `$3.10`?
-
-Note: JavaScript rounds to the nearest integer, leaving off
-trailing zeros.
-
-```ts
-const format = (f64: number): string => `$${f64.toFixed(2)}`;
-```
-
-## Arrays
 
 ### Add an item to the beginning of the array
 
@@ -93,4 +79,18 @@ function insertAtIndex(arr: any[], val: any, index: number) {
   
   return arr;
 }  
+```
+
+## Numbers
+
+### Formatting money
+
+Let's suppose I passed you the number `3.1`. How would I get
+it to read `$3.10`?
+
+Note: JavaScript rounds to the nearest integer, leaving off
+trailing zeros.
+
+```ts
+const format = (f64: number): string => `$${f64.toFixed(2)}`;
 ```
