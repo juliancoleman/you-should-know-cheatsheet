@@ -5,10 +5,29 @@ A cheatsheet of things you should know as a JS developer
 
 ## Arrays
 
+### Get max value of array
+
+Without spread:
+
+```ts
+const arr: number[] = [1, 2, 3, 4, 5];
+Math.max.apply(null, arr); // => 5
+```
+
+With spread:
+
+```ts
+Math.max(...arr);
+```
+
+### Get min value of array
+
+Change `max` to `min` in the example above.
+
 ### Sum all numbers in array
 
 ```ts
-const arr = [1, 2, 3, 4, 5];
+const arr: number[] = [1, 2, 3, 4, 5];
 const sum = (a: number, b: number) => a + b;
 arr.reduce(sum, 0);
 ```
