@@ -34,3 +34,13 @@ trailing zeros.
 ```ts
 const format = (f64: number): string => `$${f64.toFixed(2)}`;
 ```
+
+## Arrays
+
+### Add an item to the beginning of the array
+
+Unfortunately, `#unshift()` returns the length of the array,
+not the actual array.
+
+[Array.prototype.unshift()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/unshift)
+
