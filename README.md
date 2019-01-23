@@ -44,9 +44,41 @@ array, not the actual array.
 
 [Array.prototype.unshift()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/unshift)
 
+You could return the full array by wrapping in a closure:
+
+```ts
+function(arr: any[], item: any) {
+  arr.unshift(item);
+  
+  return arr;
+}
+```
+
 ### Add an item to the end of the array
 
 `#push()` also returns the new length of the array, not the
 actual array.
 
 [Array.prototype.push()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/push)
+
+The above example works with this as well. Just replace
+`unshift` with `push`.
+
+### Add an item anywhere in the array
+
+Oddly returns an empty array if you add an item without
+removing any items.
+
+[Array.prototype.splice()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/splice)
+
+You can insert (without removing items) with the following:
+
+```ts
+function insertAtIndex(arr: any[], val: any, index: number) {
+  const deleteCount: number = 0;
+  
+  arr.splice(index, deleteCount, val);
+  
+  return arr;
+}  
+```
