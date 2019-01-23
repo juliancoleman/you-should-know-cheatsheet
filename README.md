@@ -5,6 +5,14 @@ A cheatsheet of things you should know as a JS developer
 
 ## Arrays
 
+### Sum all numbers in array
+
+```ts
+const arr = [1, 2, 3, 4, 5];
+const sum = (a: number, b: number) => a + b;
+arr.reduce(sum, 0);
+```
+
 ### Filter odd numbers in array
 
 Getting the odd numbers of an array is easy.
