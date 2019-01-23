@@ -47,11 +47,17 @@ array, not the actual array.
 You could return the full array by wrapping in a closure:
 
 ```ts
-function(arr: any[], item: any) {
+function prepend(arr: any[], item: any) {
   arr.unshift(item);
   
   return arr;
 }
+```
+
+Or even simpler with [spread](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax):
+
+```ts
+const newArr = [item, ...arr];
 ```
 
 ### Add an item to the end of the array
@@ -63,6 +69,12 @@ actual array.
 
 The above example works with this as well. Just replace
 `unshift` with `push`.
+
+Or, again, even simpler with [spread](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax):
+
+```ts
+const newArr = [...arr, item];
+```
 
 ### Add an item anywhere in the array
 
