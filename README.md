@@ -39,8 +39,14 @@ const format = (f64: number): string => `$${f64.toFixed(2)}`;
 
 ### Add an item to the beginning of the array
 
-Unfortunately, `#unshift()` returns the length of the array,
-not the actual array.
+Unfortunately, `#unshift()` returns the new length of the
+array, not the actual array.
 
 [Array.prototype.unshift()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/unshift)
 
+### Add an item to the end of the array
+
+`#push()` also returns the new length of the array, not the
+actual array.
+
+[Array.prototype.push()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/push)
